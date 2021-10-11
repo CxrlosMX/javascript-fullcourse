@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals JS</title>
+</head>
+
+<body>
+    <h1>Fundamentals JavaScript 21</h1>
+
+    <!-- JS var vs  let-->
+    <script>
+        //var: global variable
+        var hola = "Hola Mundo";
+        //let: block variable
+        let hello = "Hello World";
+        // NOTE: Is not a good practice use variables 'var'
+        console.log(hola);
+        console.log(hello);
+        //Example, why you don't have to use 'var' ?
+        var music = "Rock";
+        console.log("*****var*****");
+        console.log("music variable before of the block", music);
+        {
+            var music="Pop";
+            console.log("music variable within of the block",music);
+        }
+        console.log("music variable after block",music);
+        console.log("*****let*****");
+        let music_2 = "Rock";
+        console.log("music variable before of the block", music_2);
+        {
+            let music_2="Pop";
+            console.log("music variable within of the block",music_2);
+        }
+        console.log("music variable after block",music_2);
+        /*
+        Example block in JS
+        {}
+        */
+       //Comment
+
+    </script>
+</body>
+
+</html>
