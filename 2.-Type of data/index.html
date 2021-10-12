@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of data</title>
+</head>
+
+<body>
+    <h1>Type of Data</h1>
+
+    <script>
+        //String
+        let name = "Carlos";
+        let lastname = "Rendon";
+        let greeting = new String("Hello World");
+        let lorem="       Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad.      ";
+        console.log(name,
+            lastname,
+            greeting);
+        //property: length: You can get the size of text string
+        console.log(name.length,
+            lastname.length,
+            greeting.length);
+
+        //method: .toUpperCase()-.toLowerCase()
+        console.log(
+            name.toUpperCase(),
+            lastname.toLowerCase()
+        );
+
+        //method: include():
+        console.log(((lorem.includes("antes")?"SI":"NO")));
+
+        //trim():delete all spaces
+        console.log(lorem);
+        console.log(lorem.trim());
+
+        //.split(): to create an array
+        console.log(lorem.split(" "));
+    </script>
+</body>
+
+</html>
