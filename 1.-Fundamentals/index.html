@@ -14,35 +14,60 @@
     <!-- JS var vs  let-->
     <script>
         //var: global variable
-        var hola = "Hola Mundo";
-        //let: block variable
-        let hello = "Hello World";
-        // NOTE: Is not a good practice use variables 'var'
-        console.log(hola);
-        console.log(hello);
-        //Example, why you don't have to use 'var' ?
-        var music = "Rock";
-        console.log("*****var*****");
-        console.log("music variable before of the block", music);
-        {
-            var music="Pop";
-            console.log("music variable within of the block",music);
-        }
-        console.log("music variable after block",music);
-        console.log("*****let*****");
-        let music_2 = "Rock";
-        console.log("music variable before of the block", music_2);
-        {
-            let music_2="Pop";
-            console.log("music variable within of the block",music_2);
-        }
-        console.log("music variable after block",music_2);
+        // var hola = "Hola Mundo";
+        // //let: block variable
+        // let hello = "Hello World";
+        // // NOTE: Is not a good practice use variables 'var'
+        // console.log(hola);
+        // console.log(hello);
+        // //Example, why you don't have to use 'var' ?
+        // var music = "Rock";
+        // console.log("*****var*****");
+        // console.log("music variable before of the block", music);
+        // {
+        //     var music="Pop";
+        //     console.log("music variable within of the block",music);
+        // }
+        // console.log("music variable after block",music);
+        // console.log("*****let*****");
+        // let music_2 = "Rock";
+        // console.log("music variable before of the block", music_2);
+        // {
+        //     let music_2="Pop";
+        //     console.log("music variable within of the block",music_2);
+        // }
+        // console.log("music variable after block",music_2);
         /*
         Example block in JS
         {}
         */
-       //Comment
+        //Comment
 
+        //--------CONST: Are used when the value dont change in the ejecution 
+        const PI = 3.1416;
+        let a;
+        //-> const NUEVE; You have to declare the value
+        console.log(PI);
+        //-> PI=3.15; You can't change the value of a constant
+        a = "Luis";
+        console.log(a);
+
+        //composite values: constans change their values
+        //Object :an object is a collection of values and caracters
+        const object = {
+            nombre: "Carlos",
+            edad: 20
+        }
+        //Array: array is a collection of values
+        const colors = ["Red", "Pink", "Blue", "Green"];
+
+        console.log(object);
+        console.log(colors);
+
+        object.correo = "Luis@gmail.com";
+        colors.push("Yellow");
+        console.log(object);
+        console.log(colors);
     </script>
 </body>
 
