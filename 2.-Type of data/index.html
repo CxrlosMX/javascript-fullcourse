@@ -13,34 +13,65 @@
 
     <script>
         //String
+        // let name = "Carlos";
+        // let lastname = "Rendon";
+        // let greeting = new String("Hello World");
+        // let lorem="       Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad.      ";
+        // console.log(name,
+        //     lastname,
+        //     greeting);
+        // //property: length: You can get the size of text string
+        // console.log(name.length,
+        //     lastname.length,
+        //     greeting.length);
+
+        // //method: .toUpperCase()-.toLowerCase()
+        // console.log(
+        //     name.toUpperCase(),
+        //     lastname.toLowerCase()
+        // );
+
+        // //method: include():
+        // console.log(((lorem.includes("antes")?"SI":"NO")));
+
+        // //trim():delete all spaces
+        // console.log(lorem);
+        // console.log(lorem.trim());
+
+        // //.split(): to create an array
+        // console.log(lorem.split(" "));
+
+        //----concatenation and template String
         let name = "Carlos";
         let lastname = "Rendon";
-        let greeting = new String("Hello World");
-        let lorem="       Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad.      ";
-        console.log(name,
-            lastname,
-            greeting);
-        //property: length: You can get the size of text string
-        console.log(name.length,
-            lastname.length,
-            greeting.length);
+        //concatenation= Is when you join two or more text string(+)
+        let greeting = "Hi my name is " + name + " " + lastname + ".";
+        console.log(greeting);
 
-        //method: .toUpperCase()-.toLowerCase()
-        console.log(
-            name.toUpperCase(),
-            lastname.toLowerCase()
-        );
+        //String interpolation: In JS you have the option to use string interpolation, is more easy to use and more fast.
+        //Template String
+        //backtick(`): Alt+96
+        //is more declarative
+        let greeting2 = `Hi my name is ${name} ${lastname}.`;
+        console.log(greeting2);
 
-        //method: include():
-        console.log(((lorem.includes("antes")?"SI":"NO")));
 
-        //trim():delete all spaces
-        console.log(lorem);
-        console.log(lorem.trim());
+        //difference between concatenation and string interpolation
+        //-----You cant use spaces and word wraps is the big difference
+        let codeU1="<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+        console.log(codeU1);
 
-        //.split(): to create an array
-        console.log(lorem.split(" "));
+        //-----You can use spaces and word wraps is the big difference
+        let codeU2 =
+        `<ul>
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>`;
+        console.log(codeU2);
     </script>
+
 </body>
 
 </html>
