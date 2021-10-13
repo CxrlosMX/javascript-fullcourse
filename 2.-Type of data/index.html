@@ -42,34 +42,53 @@
         // console.log(lorem.split(" "));
 
         //----concatenation and template String
-        let name = "Carlos";
-        let lastname = "Rendon";
-        //concatenation= Is when you join two or more text string(+)
-        let greeting = "Hi my name is " + name + " " + lastname + ".";
-        console.log(greeting);
+        // let name = "Carlos";
+        // let lastname = "Rendon";
+        // //concatenation= Is when you join two or more text string(+)
+        // let greeting = "Hi my name is " + name + " " + lastname + ".";
+        // console.log(greeting);
 
-        //String interpolation: In JS you have the option to use string interpolation, is more easy to use and more fast.
-        //Template String
-        //backtick(`): Alt+96
-        //is more declarative
-        let greeting2 = `Hi my name is ${name} ${lastname}.`;
-        console.log(greeting2);
+        // //String interpolation: In JS you have the option to use string interpolation, is more easy to use and more fast.
+        // //Template String
+        // //backtick(`): Alt+96
+        // //is more declarative
+        // let greeting2 = `Hi my name is ${name} ${lastname}.`;
+        // console.log(greeting2);
 
 
-        //difference between concatenation and string interpolation
-        //-----You cant use spaces and word wraps is the big difference
-        let codeU1="<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
-        console.log(codeU1);
+        // //difference between concatenation and string interpolation
+        // //-----You cant use spaces and word wraps is the big difference
+        // let codeU1="<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+        // console.log(codeU1);
 
-        //-----You can use spaces and word wraps is the big difference
-        let codeU2 =
-        `<ul>
-            <li>Primavera</li>
-            <li>Verano</li>
-            <li>Otoño</li>
-            <li>Invierno</li>
-        </ul>`;
-        console.log(codeU2);
+        // //-----You can use spaces and word wraps is the big difference
+        // let codeU2 =
+        // `<ul>
+        //     <li>Primavera</li>
+        //     <li>Verano</li>
+        //     <li>Otoño</li>
+        //     <li>Invierno</li>
+        // </ul>`;
+        // console.log(codeU2);
+
+        //Numbers:to difference to others programs lenguajes, in js we don't have double, float etc. Only used let and the value that you will use.
+        let a = 2;
+        let b = new Number(1);
+        let c = 7.19;
+        let d = "5.2";
+        console.log(a, b);
+
+        //method
+        console.log(c.toFixed(1));
+        console.log(c.toFixed(2));
+        //------
+        console.log(parseInt(c)); // return an Integer
+
+        //---how to change a String to integer?
+        console.log(d);
+        console.log(parseInt(d));
+        //plus 
+        console.log("Result: " + (a + Number.parseFloat(d)));//If  you have decimal you have to use parseFloat()
     </script>
 
 </body>
