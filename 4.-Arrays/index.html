@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Arrays</h1>
+
+    <script>
+        // Arrray Array: Is a collection of values or objects
+        const a = [];
+        console.log(a);
+        //in arrays always start with the position zero
+        const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+        console.log(b);
+        console.log(b.length);
+        //If you want to show only a word, you can use the position
+        console.log(b[1]);
+        //accessing to another array 
+        console.log(b[3][1]);
+        console.log(b[3][3][0]);
+
+        //another form to create arrays in JS
+        const c = Array.of("X", "O");
+        console.log(c);
+
+        //---
+        const d = Array(100).fill(false);
+        console.log(d);
+        //----
+        const colors = ["Red","Green", "Blue"];
+        console.log(colors);
+        colors.push("Black");//Is used to add a Object or values
+        console.log(colors);
+        colors.pop();//Remove an element
+        console.log(colors);
+
+        //--
+        colors.forEach(function(el,index){
+            console.log(`<li id="${index}">${el}</li>`);
+        });
+    </script>
+</body>
+
+</html>
