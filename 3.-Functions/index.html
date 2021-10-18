@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+</head>
+
+<body>
+    <h1>FUNCTIONS</h1>
+
+    <script>
+        //functions:  are blocks of code that you can use anytime during the project. The functions could be have some attribute and could return some values or could not
+
+        //Declare Functions
+        // function numbers() {
+        //     console.log("One");
+        //     console.log("Two");
+        //     console.log("Three");
+        // }
+        //invocation
+        // numbers();
+
+        //Functions that return values
+        function returnValues() {
+            return "Hello world";
+        }
+        //you can get the value of the function in a variable
+        // let message=returnValues();
+        // console.log(message);
+
+        //functions with values : in JS you can assign values by default
+        function greeting(name = "Host", age = 0) {
+            console.log(`Hi, my name is ${name}, i´m ${age} years old`);
+        }
+        // greeting("Luis",20);
+        // greeting();
+
+        //function expression
+        fexpre();
+        function fexpre() {
+            console.log("This is a example of function expression in JS");
+        }
+
+
+        //functionAnony();
+        // anonymous :we have to use const when we going to do an anonymous function 
+        const functionAnony = function () {
+            console.log("We are used function anonymous in JS");
+        }
+    </script>
+</body>
+
+</html>
