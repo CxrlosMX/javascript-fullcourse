@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of operators</title>
+</head>
+
+<body>
+    <h1>Types of operators</h1>
+    <script>
+        // Arithmetic Operators: +,-,*,%,()
+        let a = 5 + 5;
+        console.log(a);
+
+        // Modulus:the modulo operation returns the remainder or signed remainder of a division
+        let modulus = 5 % 2;
+        console.log(modulus);
+
+        // Bitwise Operators
+        //> >,<,>=,<=,==,!=,!==
+        // console.log(5 > 9);
+
+        // console.log(9 > 5);
+        //>= <=
+        // console.log(8>=9);
+        // console.log(9>=8);
+        // console.log(7<7);
+        // console.log(7<=7);
+
+        /*
+        =:Is for assign a value
+        ==:Is equal to
+        ===: Identical (equal and of same type)
+        */
+        console.log(8 == 8);
+        console.log("7" == 7);
+        console.log(1 == true);
+
+        /* ===: Is specially used when you want to compare two values and specific type of data
+        is a bad practice use only (==) if you want to compare two value. In the present you have to use (===)
+        */
+        console.log(`Using ===`);
+        console.log(8 === 8);
+        console.log("7" === 7);
+        console.log(1 === true);
+
+        // ++: 	Increment --:Decrement
+        console.log(`++:Increment --:Decrement`);
+        let number = 0;
+        console.log(++number);
+        console.log(number);
+        number += 5;
+        console.log(number);
+
+        number -= 5;
+        console.log(number);
+        // number/=5;
+        number *= 5;
+        console.log(number);
+
+        //
+        let i = 1;
+        i++;
+        console.log(i);
+        i--;
+        console.log(i);
+
+        /* Logical Operators:
+        And: &&
+        Or: || :when you have two or more decision, is not necessary that the two decision are true, if one is true, the process will be valid
+        Not: !: denies what is true makes it false
+    */
+        console.log(`!`);
+        console.log(!true);
+        console.log(!(false));
+
+        //----OR
+        console.log(`OR`);
+        console.log((9 === 9) || ("9" === 9));
+
+        //AND:all decisions need to be true, for valid the process
+        console.log(`AND`);
+        console.log((9 === 9) && ("9" === 9));
+    </script>
+</body>
+
+</html>
