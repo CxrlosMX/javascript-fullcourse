@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>Objects</h1>
+    <script>
+        //Objects{}: an object is a collection of values and keys
+        const b = {};
+        console.log(b);
+
+        // object with different values
+        // in an object the variables will be called attributes and the functions will be called methods
+        const carlos = {
+            name: "Carlos",
+            lastname: "Rendon",
+            age: 20,
+            hobby: ["Run", "Eat"],
+            single: false,
+            contact: {
+                email: "LuisCrenon.gmail",
+                number_phone: 95949930,
+                instagram: "CxrlosMX"
+            },
+            greeting: function () {
+                console.log(`Hi`);
+
+            },
+            saymyname: function () {
+                // this: in this case is used for do reference to objects 
+                console.log(`Hi my name es ${this.name} ${this.lastname}, im ${this.age} years old and you can follow me in instagram: ${this.contact.instagram}`);
+            }
+
+        }
+        console.log(carlos);
+
+        // you can access to a specific value
+        console.log(carlos["age"]);
+        console.log(carlos.single);
+        console.log(carlos.hobby);
+        console.log(carlos.hobby[0]);
+        console.log(carlos.contact.email);
+
+        // ----
+        carlos.saymyname();
+        // keys():make a list with the objects in the object
+        console.log(Object.keys(carlos));
+        // values(); return the values
+        console.log(Object.values(carlos));
+
+        //hasOwnProperty(); is used to verificate if a property is in the object
+        console.log(carlos.hasOwnProperty("name"));
+    </script>
+</body>
+
+</html>
