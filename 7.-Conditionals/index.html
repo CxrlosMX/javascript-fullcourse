@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+</head>
+
+<body>
+    <h1>Conditionals</h1>
+
+    <script>
+        //conditionals: They are mostly used to determine Program Flow through 
+
+        // let age = 20;
+        // if (age >= 20) {
+        //     console.log(`You're of age`);
+        // }
+        // else {
+        //     console.log(`You're not of age`);
+        // }
+        // //---
+        // if (age <=19) {
+        //     console.log(`You're not of age`);
+
+        // }
+        // else {
+        //     console.log(`You're of age`);
+        // }
+
+        //-------------------
+        /*
+        Sleep: 0hrs- 5hrs
+        good morning: 6hrs-11hrs
+        good afternoon: 12hrs-18hrs
+        good night: 19hrs-23hrs
+        */
+        // let h = 18;
+        // if (h >= 0 && h <= 23) {
+        //     if (h >= 0 && h <= 5) {
+        //         console.log(`Sleeping`);
+        //     }
+        //     else if (h >= 6 && h <= 11) {
+
+        //         console.log(`Good morning`);
+        //     }
+        //     else if (h >= 12 && h <= 18) {
+
+        //         console.log(`Good afternoon`);
+        //     }
+        //     else {
+        //         console.log(`Good Night`);
+        //     }
+        // }
+        // else {
+        //     console.log(`you have to enter correct values`);
+        // }
+
+        // Ternary Operator: ((condition)?"true":"false")
+        let age = 9;
+        console.log(((age >= 18) ? `You're of age` : `You're not of age`));
+
+        // switch-case
+        /*
+        Sunday=0;
+        Monday=1;
+        Tuesday=2;
+        Wednesday:3
+        Thursday:4;
+        Friday:5;
+        Saturday: 6;
+        */
+        let day = 1;
+        switch (day) {
+            case 0:{
+                console.log(`Sunday`);
+                break; //break the process
+                
+            }
+            case 1:{
+                console.log(`Monday`);
+                break;
+                
+            }
+            case 2:{
+                console.log(`Tuesday`);
+                break;
+                
+            }
+            case 3:{
+                console.log(`Wednesday`);
+                break;
+                
+            }
+            case 4:{
+                console.log(`Thursday`);
+                break;
+                
+            }
+            case 5:{
+                console.log(`Friday`);
+                break;
+                
+            }
+            case 6:{
+                console.log(`Saturday`);
+                break;
+                
+            }
+            default:{ //
+                console.log(`this day doesn't exist`);
+                break;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
