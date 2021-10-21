@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    <h1>Loops</h1>
+
+    <script>
+        // loop: Loops can execute a block of code as long as a specified
+
+        // while
+        console.log(`While`);
+        let i = 1;
+        while (i <= 10) {
+            console.log(i);
+            i++;
+        }
+        i = 1;
+        console.log(`Do-While`);
+        //do-while:The body of the loop is executed at first and then the condition
+        do {
+            console.log(i++);
+        } while (i <= 10);
+        // console.log(i);
+
+
+        // the loop more common in JS or  more used is "for"
+        // for(initialization: condition: increment or decrement){code}
+        console.log(`FOR`);
+        for (let j = 0; j <= 10; j++) {
+            console.log(j);
+        }
+        // Arrays with loop FOR
+        console.log("Array");
+        const arrayNumbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        for (let k = 0; k < arrayNumbers.length; k++) {
+            console.log(arrayNumbers[k]);
+
+        }
+
+        //for/in: loops through the properties of an object , is specially used in objects
+        console.log(`ForIn`);
+        const carlos = {
+            name: "Luis",
+            lastname: "Rendon",
+            age: 20
+        }
+        for (const index in carlos) {
+            console.log(`Key:${index}, value: ${carlos[index]}`);
+        }
+
+        // for/of - loops through the values of an iterable object, is more common used in Arrays
+        console.log("------------------------");
+        console.log("for/of");
+        for (const elemento of arrayNumbers) {
+            console.log(elemento);
+        }
+
+        let text = "CxrlosMX";
+        for (const t of text) {
+            console.log(t);
+        }
+    </script>
+</body>
+
+</html>
