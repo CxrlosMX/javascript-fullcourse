@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-catch</title>
+</head>
+
+<body>
+    <h1>Try-catch</h1>
+    <script>
+        // Error handling
+        // try-catch: The try statement allows you to define a block of code to be tested for errors while it is being executed. 
+        try {
+            /*
+            in this part will be add the code
+            */
+            console.log("Firt Message");
+            hi;
+            console.log("Second Message");
+        } catch (error) {
+            //  in this part will be captured the error
+            console.log("Error");
+            // you can call the error, showing the message 
+            console.log(error);
+        }
+        finally {
+            // always be executed to the final
+            console.log("Finaly");
+        }
+
+        //-------------
+        try {
+            let number = "a";
+            // The isNaN() function determines whether a value is an illegal number
+            if (isNaN(number)) {
+                throw new Error("this character is not a number");
+            }
+            console.log((number * number));
+        } catch (error) {
+            console.log(error);
+        }
+
+
+    </script>
+</body>
+
+</html>
