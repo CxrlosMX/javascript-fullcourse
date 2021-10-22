@@ -13,36 +13,62 @@
     <script>
         // Error handling
         // try-catch: The try statement allows you to define a block of code to be tested for errors while it is being executed. 
-        try {
-            /*
-            in this part will be add the code
-            */
-            console.log("Firt Message");
-            hi;
-            console.log("Second Message");
-        } catch (error) {
-            //  in this part will be captured the error
-            console.log("Error");
-            // you can call the error, showing the message 
-            console.log(error);
-        }
-        finally {
-            // always be executed to the final
-            console.log("Finaly");
-        }
+        // try {
+        //     /*
+        //     in this part will be add the code
+        //     */
+        //     console.log("Firt Message");
+        //     hi;
+        //     console.log("Second Message");
+        // } catch (error) {
+        //     //  in this part will be captured the error
+        //     console.log("Error");
+        //     // you can call the error, showing the message 
+        //     console.log(error);
+        // }
+        // finally {
+        //     // always be executed to the final
+        //     console.log("Finaly");
+        // }
 
-        //-------------
-        try {
-            let number = "a";
-            // The isNaN() function determines whether a value is an illegal number
-            if (isNaN(number)) {
-                throw new Error("this character is not a number");
+        // //-------------
+        // try {
+        //     let number = "a";
+        //     // The isNaN() function determines whether a value is an illegal number
+        //     if (isNaN(number)) {
+        //         throw new Error("this character is not a number");
+        //     }
+        //     console.log((number * number));
+        // } catch (error) {
+        //     console.log(error);
+        // } 
+
+        //----------------------------------
+        //break & continue
+        console.log("Break");
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        for (let i = 0; i < numbers.length; i++) {
+
+
+            if (i == 5) {
+                // break the process
+                break;
             }
-            console.log((number * number));
-        } catch (error) {
-            console.log(error);
-        }
+            console.log(numbers[i]);
 
+        }
+        // Continue
+        console.log("continue");
+        for (let i = 0; i < numbers.length; i++) {
+
+            if (i == 5) {
+                // skip the code below 
+                continue;
+            }
+            console.log(numbers[i]);
+
+
+        }
 
     </script>
 </body>
