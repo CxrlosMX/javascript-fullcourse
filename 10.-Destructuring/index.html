@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <h1>Destructuring</h1>
+
+    <script>
+        // Destructuring Assignment is a JavaScript expression that allows to unpack values from arrays, or properties from objects
+
+        // example not using destructuring
+        // let numbers = [1, 2, 3];
+        // let one = numbers[0],
+        //     two = numbers[1],
+        //     three = numbers[2];
+
+        // console.log(one, two, three);
+        // //Using destructuring
+        // const [uno, dos, tres] = numbers;
+        // console.log(uno, dos, tres);
+
+        //Destructuring in Objects
+        const person = {
+            name: "Luis",
+            lastname: "Rendon",
+            age: 20
+        }
+        // when you work with variables, the new variable that you are creating needs to have the same name of the variable in the object
+        let { name, lastname, age } = person;
+        console.log(name, lastname, age);
+    </script>
+
+
+</body>
+
+</html>
