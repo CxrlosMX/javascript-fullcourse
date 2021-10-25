@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Spread</title>
+</head>
+
+<body>
+    <h1>Rest parameter && Operator Spread</h1>
+
+    <script>
+        //Rest parameter:The rest parameter syntax allows us to represent an indefinite number of arguments as an array. 
+        function plus(a, b, ...c) {
+            let result=a+b;
+            c.forEach(function(n){
+                result+=n;
+            });
+            return result;
+        }
+        console.log(plus(1,2));
+
+        console.log(plus(1,2,3,4,5));
+
+
+
+
+        //Operator Spread is a new addtion to set of operators in JS
+        const arr1=[1,2,3,4,5],
+        arr2=[6,7,8,9,0];
+
+        console.log(arr1,arr2);
+
+        // If you want to add values of others arrays to a new array you can use Operator Spread
+        //Not using the operator Spread const arr3=[arr1,arr2];
+        // Using the operator
+        const arr3=[...arr1,...arr2];
+        console.log(arr3);
+
+    </script>
+
+</body>
+
+</html>

@@ -26,14 +26,46 @@
         // console.log(uno, dos, tres);
 
         //Destructuring in Objects
-        const person = {
-            name: "Luis",
-            lastname: "Rendon",
-            age: 20
+        // const person = {
+        //     name: "Luis",
+        //     lastname: "Rendon",
+        //     age: 20
+        // }
+        // // when you work with variables, the new variable that you are creating needs to have the same name of the variable in the object
+        // let { name, lastname, age } = person;
+        // console.log(name, lastname, age);
+
+
+
+        // --------Object Literals in JavaScript 
+        let name = "Junior",
+            age = 7;
+
+        const dog = {
+            name: name,
+            age: age,
+            dark: function () {
+                console.log("GuuuaaaGuaaaa");
+            }
+
         }
-        // when you work with variables, the new variable that you are creating needs to have the same name of the variable in the object
-        let { name, lastname, age } = person;
-        console.log(name, lastname, age);
+        console.log(dog);
+        dog.dark();
+// if exist a variable with the value that you will assign a value, you can do this
+        const d = {
+            name,
+            age,
+            type:"Doberman",
+            dark() {
+                console.log("GuuuaaaGuaaaa");
+                console.log("GuuuaaaGuaaaa");
+            }
+        }
+        console.log(d.dark());
+
+
+
+
     </script>
 
 
