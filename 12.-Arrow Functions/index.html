@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <h1>Arrow Functions</h1>
+
+    <script>
+        //Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create functions in a cleaner way compared to regular functions.   
+        const greeting = function () {
+            console.log(`Hello`);
+        }
+
+        greeting();
+
+        // Arrow Function: examples
+
+        // If the body has single statement or expression, you can write arrow function as:
+        const greeting2 = () => console.log(`Hi`);
+        greeting2();
+
+
+        // ----------------------The syntax of the arrow function is: conts myFunction=(arg1,arg2...argN)=> { statement(s)}
+        const x = (a, b) => a + b;
+
+        console.log(`Result: ${x(5, 5)}`);
+
+        // ---if only we have a value in the function, we can omit "( )"
+        const a = name => console.log(`Hello ${name}`);
+        a("CxrlosMX");
+
+        // ---
+        const greetings = () => {
+            console.log("One");
+            console.log("Two");
+            console.log("Three");
+        };
+        greetings();
+
+        //Arrow Functions in Arrays
+        const numbers = [1, 2, 3, 4, 5];
+        numbers.forEach((i, index) => console.log(`${i} is in the position ${index}`));
+
+        //----THIS
+        // function dog() {
+        //     console.log(this);
+        // }
+        // dog();
+
+        // Is a 
+        const dog = {
+            name: "Junior",
+            bark() {
+                console.log(this)
+            }
+        }
+        dog.bark();
+
+    </script>
+</body>
+
+</html>
