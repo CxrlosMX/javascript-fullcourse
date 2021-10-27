@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypal Inheritance</title>
+</head>
+
+<body>
+    <h1>Prototypal Inheritance</h1>
+
+    <script>
+        function Animal(name, gender, s) {
+            this.name = name;
+            this.gender = gender;
+            this.s = s;
+        }
+        // methods added to the function prototype
+        Animal.prototype.sound = function () {
+            console.log(this.s);
+        }
+        Animal.prototype.greeting = function () {
+            console.log(`Hi my name is ${this.name}`);
+        }
+
+
+        //Ingeritance
+        function dog(name, gender,s, size) {
+            this.super = Animal;
+            this.super(name,gender,s);
+            this.size=size;
+        }
+
+        //Dog is inheriting of animal
+        dog.prototype=new Animal();
+        dog.prototype.constructor=dog;
+
+        //@override
+        dog.prototype.sound= function(){
+
+            console.log("I´m a Dog");
+        };
+        //Adding a nwe method
+        dog.prototype.walk=function(){
+            console.log("Walking");
+        }
+
+        const snoopy=new dog("Snoopy","M","Guua","Big");
+
+        console.log(snoopy);
+        snoopy.walk();
+    </script>
+</body>
+
+</html>
