@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype in JavaScript </title>
+</head>
+
+<body>
+    <h1>Prototype in JavaScript</h1>
+    <script>
+        // The prototype is an object that is associated with every functions and objects by default in JavaScript
+        //OOP: Class, Objects, methods, attributes
+        // const animal= {
+        //     name:"Snoopy",
+        //     sound(){
+        //         console.log("Grr Grr");
+
+        //     }
+
+        // }
+        // const animal2= {
+        //     name:"Lola Bunny",
+        //     sound(){
+        //         console.log("Jum Jum");
+
+        //     }
+
+        // }
+        // console.log(animal);
+        // console.log(animal2);
+
+        // Constructor function:  A constructor is a function that initializes an object. 
+        // v1= function Animal(name, gender,s) {
+        //     this.name = name;
+        //     this.gender = gender;
+        //     this.sound = function () {
+        //         console.log(s);
+        //     }
+        //     this.greeting=function(){
+        //         console.log(`Hi my name is ${this.name}`);
+        //     }
+        // }
+        //------------------------Contructir Function v2. This is the best opcion when you will work with functions, 
+        function Animal(name, gender,s) {
+            this.name = name;
+            this.gender = gender;
+            this.s=s;
+        }
+        // methods added to the function prototype
+        Animal.prototype.sound = function () {
+            console.log(this.s);
+        }
+        Animal.prototype.greeting = function () {
+            console.log(`Hi my name is ${this.name}`);
+        }
+
+
+
+
+        // instance 
+        const snoopy = new Animal("Snoopy", "M", "guuaa guaa"),
+            lolaBunny = new Animal("Lola Bunny", "F", "Juum Jumm");
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        //--------------------------
+        snoopy.sound();
+        snoopy.greeting();
+        lolaBunny.sound();
+        lolaBunny.greeting();
+
+
+    </script>
+</body>
+
+</html>
