@@ -11,45 +11,81 @@
 <body>
     <h1>Class Inheritance in JavaScript</h1>
     <script>
-        //Class Inheritance in JavaScript
+        // Class Inheritance in JavaScript
         class Animal {
             constructor(name, size) {
                 this.name = name;
                 this.size = size;
             }
 
-            walk(){
+            walk() {
                 console.log(`${this.name} is Walking in the park`);
             }
 
 
+
         }
-        class Dog extends Animal{
+
+        //all class in JS are public
+        class Dog extends Animal {
             //super is a method that calls the constructor of the parent class
-            constructor(name,size, type){
+            constructor(name, size, type) {
                 super(name, size);
-                this.type=type;
+                this.type = type;
+                this.breed = null;
             }
-            walk(){
-                console.log("I´m a dog and my name is "+this.name);
+            //GETTERS AND SETTERS
+            get getName() {
+                return this.name;
             }
-            eat(){
+            set setName(name) {
+                this.name = name;
+            }
+            set setBreed(breed) {
+                this.breed = breed;
+            }
+            get getBreed(){
+                return this.breed;
+            }
+
+            walk() {
+                console.log("I´m a dog and my name is " + this.name);
+            }
+            eat() {
                 console.log(`I´m eating croquettes`);
             }
+            static run() {
+                // static methods: are shared among instances of a class. The static methods are called via the class name, not the instances of the class.
+                console.log(`Runninnning`);
+            }
 
         }
 
 
-        const mimi=new Animal("Mimi",1), scooby=new Animal("Scooby",2);
+        const mimi = new Animal("Mimi", 1), scooby = new Animal("Scooby", 2);
         console.log(mimi);
         console.log(scooby);
         mimi.walk();
         scooby.walk();
 
-        const dogy=new Dog("Dogy",2,"Doberman");
+        const dogy = new Dog("Dogy", 2, "Doberman");
         console.log(dogy);
         dogy.walk();
         dogy.eat();
+
+
+        // static methods getter and setter in JS
+        // static methods: are shared among instances of a class. The static methods are called via the class name, not the instances of the class.
+        console.log(`-------------Static Methods------------------`);
+        Dog.run();
+
+        //Getters and setters are used to protect your data, particularly when creating classes. For each instance variable, a getter method returns its value while a setter method sets or updates its value
+        console.log(`-------------GETTERs AND SETTERs------------------`);
+        //GETTER
+        console.log(dogy.getName);
+        //SETTER
+        dogy.setBreed="BIGWAGn";
+        console.log(dogy.getBreed);
 
     </script>
 
