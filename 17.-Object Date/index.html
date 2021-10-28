@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <h1>Date</h1>
+    <script>
+        //Date:The Date object is a built-in object in JavaScript that stores the date and time
+        console.log(Date());
+        let date=new Date();
+
+        console.log(date.getDate()); //Return the day of the month
+
+        console.log(date.getDay());//return the day in the week
+
+        console.log(date.getMonth());//return the month of the year in format number (0-11)
+
+        console.log(date.getFullYear()); //return the present year
+
+        //Methos to get the hour, minute and miliseconds
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+        console.log(date.getMilliseconds());
+
+        console.log(date.toString());
+        console.log(date.toLocaleString());
+
+        //only date
+        console.log(date.toLocaleDateString());
+        console.log(date.toLocaleTimeString());
+
+        //TimeZone
+        console.log(date.getTimezoneOffset());
+
+        //Hour Zero
+        console.log(date.getUTCDate());
+        console.log(date.getUTCHours());
+        console.log(date.getUTCSeconds());
+
+        //Timestamp
+        console.log(Date.now());
+
+        //
+        let b=new Date(2000,11,11);
+        console.log(`my birthday is ${b}`);
+
+    </script>
+
+</body>
+</html>
