@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Console</title>
+</head>
+
+<body>
+    <h1>Object Console</h1>
+    <script>
+        //
+        console.log(console);
+        console.error("This is an error");
+        console.warn("This is a warning");
+        console.info("This is an informative message");
+        console.log("It is a record of what has happened in our application");
+        //
+        let name = "Carlos",
+            lastname = "Rendon",
+            age = 20;
+
+        console.log(name, lastname, age);
+        console.log(`Hi my name is ${name} ${lastname} i´m ${age} years old`);
+
+        //%s and %d: 
+        //%s: The \s metacharacter is used to find a whitespace character. A whitespace character can be: A space character.
+        //%d: The RegExp \D Metacharacter in JavaScript is used to search non digit characters i.e all the characters except digits.
+        console.warn("%s and %d");
+        console.log(`Hi my name is %s %s i´m %s years old`, name, lastname, age);
+
+
+        //Console.creal= clean all space on the console
+        console.clear();
+
+        //With the nect code you can see de propertys of your document
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+        console.clear();
+        // The console.group() method creates a new inline group in the Web console log.
+        console.group("Courses with @CxrlosMX");
+        console.log("Course JS");
+        console.log("Course HTML");
+        console.log("Course CSS");
+        console.log("Course Java");
+        console.groupEnd(); //i´m indication that the group is finishing
+        console.clear();
+
+        //----------------------------------------------
+        //Console.table(): The console.table() method writes a table in the console view. 
+        console.log(console);
+        /*
+        The sort() method sorts the elements of an array. The sort order can be either alphabetic or numeric
+        */
+        console.table(Object.entries(console).sort());
+        console.clear();
+
+
+        ///
+        const numbers1 = [1, 2, 3, 4, 5],
+            vowels = ["a", "e", "i", "o", "u"];
+        console.table(numbers1);
+        console.table(vowels);
+
+        const dog = {
+            name: "Junior",
+            color: "White"
+
+        }
+        console.table(dog);
+        console.clear();
+
+        //The console.time() method starts a timer you can use to track how long an operation takes.
+        console.time("How long an operation takes");
+        const array = Array(1000000);
+        for (let index = 0; index < array.length; index++) {
+            array[index] = index + 1;
+        }
+        console.timeEnd("How long an operation takes");
+        //console.table(array);
+        console.clear();
+
+        //The console.count() method logs the number of times that this particular call to count() has been called.
+
+        for (let i = 0; i < 100; i++) {
+            console.count("code for");
+            console.log(i);
+        }
+        console.clear();
+
+
+        //The console.assert() method writes a message to the console, but only if an expression evaluates to false.
+        let x=3, 
+        y=2,
+        xy="X always need to be less than Y";
+        console.assert(x<y,{x,y,xy});
+
+    </script>
+</body>
+
+</html>
