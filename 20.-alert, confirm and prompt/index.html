@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, confirm and prompt</title>
+</head>
+
+<body>
+    <h1>Alert, confirm and prompt</h1>
+    <script>
+        //Window Methods
+        //alert: This one we’ve seen already. It shows a message and waits for the user to press “OK”.
+        // window.alert("Hello this is an Alert");
+
+        //The function confirm: shows a modal window with a question and two buttons: OK and Cancel.
+        //  window.confirm("Hello this is a Confirm");
+
+        //Prompt It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel.
+        // window.prompt("This is a prompt and you can write values");
+
+        let alertMeesege = alert("Hello this is an Alert"),
+            confirmMessege = confirm("Hello this is a confirm"),
+            promptValue = prompt("Introduce some value");
+            
+        console.log(alertMeesege);
+        console.log(confirmMessege);
+        console.log(promptValue);
+
+    </script>
+</body>
+
+</html>
