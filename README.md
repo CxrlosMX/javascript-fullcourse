@@ -1,5 +1,7 @@
 # JavaScript Course 2021
-[![JSgif](https://raw.githubusercontent.com/StewartGF/StewartGF/master/images/javascript.gif "JSgif")](https://raw.githubusercontent.com/StewartGF/StewartGF/master/images/javascript.gif "JSgif")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/StewartGF/StewartGF/master/images/javascript.gif"/>
+</p>
 
 ------------
 
