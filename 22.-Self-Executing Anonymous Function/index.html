@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Executing Anonymous Function</title>
+</head>
+
+<body>
+    <h1>Self-Executing Anonymous Function</h1>
+
+    <script>
+        //Self-Executing Anonymous Function
+        //The self-executing anonymous function is a special function which is invoked right after it is defined. There is no need to call this function anywhere in the script. This type of function has no name and hence it is called an anonymous function.
+        //Example Clasic
+        (function (d,w,c){
+            //Function Body
+            console.log("My Second IIFE");
+            console.log(d);
+            console.log(w);
+            c.log("This is a Console.log");
+        })(document,window,console);
+
+      
+        //------------------
+        //Clasic
+        (function (){
+            //Function Body
+            console.log("Version Clasic");
+        })();
+       
+        //CrockFord (JavaScript The Good Parts)
+        ((function() {
+            console.log("Version CrockFord");
+        })());
+
+        //Unaria
+        +function(){
+            console.log("Version Unaria");
+        }();
+
+        //Facebook
+        !function(){
+            console.log("Version Facebook");
+        }();
+
+    </script>
+</body>
+
+</html>
