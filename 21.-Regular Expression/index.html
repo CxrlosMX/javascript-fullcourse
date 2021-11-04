@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+
+<body>
+    <h1>Regular Expressions</h1>
+    <script>
+        /*A regular expression is a sequence of characters that forms a search pattern.When you search for data in a text, you can use this search pattern to describe what you are searching for.A regular expression can be a single character, or a more complicated pattern.Regular expressions can be used to perform all types of text search and text replace operations.
+
+        g=global search
+        i=Search that is not case sensitive.
+
+        [abc]	Find any of the characters between the brackets
+
+        [0-9]	Find any of the digits between the brackets
+
+        \d	Find a digit
+    */
+
+        let text = "lorem data in a text, you can use this search pattern to describe what you are searching for.A regular expression can be a single character, or a more complicated pattern.Regular expressions can be used to perform all types of text";
+
+        //You can use two diferent forms to create Regular Expressions
+        let expReg = new RegExp("lorem", "i");
+
+        let expReg2 = /lorem/ig;
+
+        //Return true if the word exist in the text
+        console.log(expReg.test(text));
+        //Return an arrray witd the caracters
+        console.log(expReg.exec(text));
+    </script>
+</body>
+
+</html>
