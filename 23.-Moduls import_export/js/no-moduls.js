@@ -1,0 +1,1 @@
+console.log("my navigator does not support Modules +ES6");
