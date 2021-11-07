@@ -1,6 +1,6 @@
 //2).-Program a function that returns the text trimmed according to the number of characters indicated, eg. myFunction ("Hello World", 4) will return "Hello".
 function textNumber(word, number) {
-    if (typeof word) {
+    if (typeof word=='string') {
    let t="";
    for (let i = 0; i < number; i++) {
        t += word.charAt(i);
@@ -9,4 +9,4 @@ function textNumber(word, number) {
    }
     return "No caracter";
 }
-console.log(textNumber(1, 2));
+console.log(textNumber("Hola", 2));
