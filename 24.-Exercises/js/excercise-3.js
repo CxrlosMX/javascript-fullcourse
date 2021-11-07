@@ -1,4 +1,4 @@
-//3) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+//3)3) Program a function that repeats a text X times, eg. myFunction ('Hello World', 3) will return Hello World Hello World Hello World.
 function repitWord(number, word) {
     if (typeof word == 'string') {
         let text="";
