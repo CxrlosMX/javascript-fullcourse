@@ -9,7 +9,7 @@ function lenghtText(text) {
 //console.log(`The string has a length of ${lenghtText("Hi my friend")}`);
 
 //Exmple using arrow function
-const caractersText = (text = "") => (text != "" && typeof text == 'stirng') ? console.log(`The string ${text} has a length of ${text.length}`) : console.warn("Please introduce a value");
+const caractersText = (text = "") => (text != "" && typeof text === 'stirng') ? console.log(`The string ${text} has a length of ${text.length}`) : console.warn("Please introduce a value");
 
 caractersText();
 
