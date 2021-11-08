@@ -14,4 +14,4 @@ function textNumber(word, number) {
 //Exercise resolved with arrow functions and methods of the classes string
 const numberText = (text = "", number) => (text != "" && typeof text == 'string') ? console.log(text.slice(0, number)) : console.warn("Please introduce a correct value");
 
-numberText("CxrlosMX", 2);
+numberText("CxrlosMX" );
