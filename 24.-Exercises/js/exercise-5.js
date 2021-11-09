@@ -20,4 +20,17 @@ const countWord = (text = "", word = "") => {
     return console.log(`the word is repeating: ${c}`);
 };
 
-countWord("Hola mundo, adios mundo","mundo");
+//countWord("Hola mundo, adios mundo","mundo");
+
+// 7) Program a function that validates if a given word or phrase is a palindrome (which reads the same in one sense as in another), eg: myFunction ("Rooms") will return true
+const wordPalindrome = (word = "") => {
+    if (!word) return console.warn("Please introduce a word");
+    let newW = word.split("").reverse().join("");
+    if (newW.toUpperCase() === word.toUpperCase()) {
+        
+        return console.log(true);
+    }
+    return console.warn(false);
+
+};
+wordPalindrome("salas");
