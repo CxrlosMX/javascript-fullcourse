@@ -33,4 +33,13 @@ const wordPalindrome = (word = "") => {
     return console.warn(false);
 
 };
-wordPalindrome("salas");
+//wordPalindrome("salas");
+
+//8) Program a function that removes a certain pattern of characters from a given text eg MyFunction ("xy1, xy2, xy3", "xy") will return "1,2,3" 
+const removeCaracters=(text="", wdelete="")=>{
+    (!text)?console.warn("Please introduce text")
+    :(!wdelete)?console.warn("Please introduce the word that you want to delete"):console.info(text.replace(new RegExp(wdelete,"ig"),""));
+
+}
+
+removeCaracters("xy1,xy2","xy");
