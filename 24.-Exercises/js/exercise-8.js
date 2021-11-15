@@ -20,11 +20,23 @@ const convert = (number = undefined, base = undefined) => {
         }
     }
 }
-convert(83, 2);
+//convert(83, 2);
 
 
 
 /*
-16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+16) Program a function that returns the final amount after applying a discount to a given amount, eg. myFunction (1000, 20) will return 800. */
+const discount = (total = undefined, discount = 0) => {
+    if (total === undefined) return console.error(`Please introduce the total`);
+    if (typeof total !== `number`) return console.warn(`Please the total need to be of type "number"`);
+    if (total <= 0) return console.warn(`Total can´t be negative or zero`);
+    if (typeof discount !== `number`) return console.warn(`Discount need to be of type Number`);
+    if (discount < 0) return console.warn(`Discount can´t be negative or zero`);
+
+    return console.info(`${total}$-${discount}%= ${total - ((total * discount) / 100)}`);
+};
+discount(1000, 20);
+
+/*
 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 */
