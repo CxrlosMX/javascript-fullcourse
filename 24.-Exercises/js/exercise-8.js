@@ -35,8 +35,19 @@ const discount = (total = undefined, discount = 0) => {
 
     return console.info(`${total}$-${discount}%= ${total - ((total * discount) / 100)}`);
 };
-discount(1000, 20);
+//discount(1000, 20);
+
+
 
 /*
-17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+17) Program a function that, given a valid date, determines how many years have passed until today, eg. myFunction (new Date (1984,4,23)) will return 35 years (in 2020).
 */
+const calculateYears = (date = undefined) => {
+    if (date === undefined) return console.warn(`You have to add a date`);
+    if (!(date instanceof Date)) return console.warn(`date need to be instance of Date`);
+    let today = new Date().getTime() - date.getTime(),
+        years = 1000 * 60 * 60 * 24 * 365,
+        yearsHumans = Math.floor(today / years);
+    return (Math.sign(yearsHumans) === -1) ? console.info(`Missing ${Math.abs(yearsHumans)} years to ${date.getFullYear()}`) : (Math.sign(yearsHumans) === 1) ? console.info(`Have passed ${Math.abs(yearsHumans)} years since ${date.getFullYear()}`) : console.info(`We are in the actual year ${date.getFullYear()}`);
+
+}
