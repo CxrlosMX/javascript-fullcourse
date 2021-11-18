@@ -21,12 +21,29 @@ const countletters = (text = "") => {
     return console.info(`Vowels: ${vowels}, Consonant: ${consonant}`);
 }
 
-countletters(`Hello World`);
+//countletters(`Hello World`);
 
 /*
-19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Carlos Rendon") devolverá verdadero.
+19) Program a function that validates that a text is a valid name, eg. myFunction ("Carlos Rendon") will return true.
+*/
+const validname = (name = "") => {
+    if (!name) return console.warn(`Please introduce a name`);
+    if (typeof name !== `string`) return console.error(`Please introduce a string text`);
+    //\s: or for spaces
+    let exp = /^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$/g.test(name);
+    return (exp) ? console.info(`This name is valid`) : console.info(`This name is not valid`);
+}
+//validname(`Luis Carlos`);
 
-*/
+
 /*
-20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("cxrlosmx@gmail.com") devolverá verdadero.
+20) Program a function that validates that a text is a valid email, eg. myFunction ("cxrlosmx@gmail.com") will return true.
 */
+const validEmail = (email = "") => {
+    if (!email) return console.warn(`Please introduce a name`);
+    if (typeof email !== `string`) return console.error(`Please introduce a string text`);
+
+    let exp = /[a-z0-9]+(\.[_a-z0-9+]*@[a-z0-9-]+)*(\.[a-z]{2,15})/g.test(email);
+    return (exp) ? console.info(`This email is valid`) : console.info(`This email is not valid`);
+}
+validEmail(`cxrlosmx@gmail.com`);
