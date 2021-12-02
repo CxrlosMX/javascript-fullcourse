@@ -1,0 +1,11 @@
+{
+    "strig": "CxrlosMX",
+    "number": "20",
+    "booleano":"true",
+    "array": ["run", "program", "cook"],
+    "object": {
+        "twitter": "@cxrlosmx",
+        "instagram": "@dev_cxrlosmx"
+    },
+    "nulo": "null"
+}
