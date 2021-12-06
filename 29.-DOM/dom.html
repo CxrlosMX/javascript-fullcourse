@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>WEB APIs</h1>
+    <h2>DOM:Document Object Model</h2>
+    <h2>BOM: Browser Object Model</h2>
+    <h2>CSSOM: CSS Object Model</h2>
+    <h2>WEB APIs</h2>
+    <ul>
+        <li>Events</li>
+        <li>Forms</li>
+        <li>AJAX- Fetch</li>
+        <li>History</li>
+        <li>Web Storage</li>
+        <li>Geolocation</li>
+        <li>Drag & Drop</li>
+        <li>Inexed DB</li>
+        <li>Canvas</li>
+        <li>MatchMedia</li>
+        <li>etc...</li>
+    </ul>
+
+    <script>
+        console.log(window);
+        console.log(document);
+        // The SpeechSynthesis interface of the Web Speech API is the controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.
+        let text="Hi my name is Carlos, and this is the course of JavaScript";
+
+        const speak=(text)=>{
+            speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+        }
+        // speak(text);
+        
+
+    </script>
+</body>
+</html>
