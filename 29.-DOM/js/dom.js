@@ -25,5 +25,5 @@ setTimeout(()=>{
 },3000);
 
 // bad practice
-console.log(document.write("<h2>CxrlosMX</h2>"));
+// console.log(document.write("<h2>CxrlosMX</h2>"));
 
