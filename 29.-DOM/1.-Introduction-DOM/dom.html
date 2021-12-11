@@ -7,36 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
     <style>
-        :root{
+        :root {
             --yellow-color: #f7df1e;
             --dark-color: #222;
-            --red-color:#f00;
+            --red-color: #f00;
         }
-        .card{
+
+        .card {
             display: inline-block;
             background-color: var(--dark-color);
             color: var(--yellow-color);
         }
-        .cards{
+
+        .cards {
             border: thick solid var(--dark-color);
             padding: 1rem;
         }
-        .card figcaption{
+
+        .card figcaption {
             padding: 1rem;
         }
-        .rotate-45{
+
+        .rotate-45 {
             transform: rotate(45deg);
         }
-        .rotate-135{
+
+        .rotate-135 {
             transform: rotate(135deg);
         }
-        .rotate-80{
+
+        .rotate-80 {
             opacity: 8;
         }
-        .sepia{
+
+        .sepia {
             filter: sepia(1);
         }
-
     </style>
 </head>
 
@@ -76,22 +82,41 @@
         </ul>
     </nav>
     <input type="text" name="name" placeholder="Introduce your name">
-    <a href="dom.html" style="background-color:#f7df1e;color: #222;" class="link-dom" data-id="1" data-description="Document Object Model">DOM</a>
+    <a href="dom.html" style="background-color:#f7df1e;color: #222;" class="link-dom" data-id="1"
+        data-description="Document Object Model">DOM</a>
     <section class="cards">
-        
-        <figure class="card"><img src="https://placeimg.com/200/200/tech" alt="Tech"><figcaption>Tech</figcaption></figure>
 
-        <figure class="card"><img src="https://placeimg.com/200/200/animals" alt="Animals"><figcaption>Animals</figcaption></figure>
+        <figure class="card"><img src="https://placeimg.com/200/200/tech" alt="Tech">
+            <figcaption>Tech</figcaption>
+        </figure>
 
-        <figure class="card"><img src="https://placeimg.com/200/200/people" alt="People"><figcaption>People</figcaption></figure>
+        <figure class="card"><img src="https://placeimg.com/200/200/animals" alt="Animals">
+            <figcaption>Animals</figcaption>
+        </figure>
 
-        <figure class="card"><img src="https://placeimg.com/200/200/arch" alt="Arch"><figcaption>Arch</figcaption></figure>
+        <figure class="card"><img src="https://placeimg.com/200/200/people" alt="People">
+            <figcaption>People</figcaption>
+        </figure>
 
-        <figure class="card"><img src="https://placeimg.com/200/200/nature" alt="Nature"><figcaption>Nature</figcaption></figure>
+        <figure class="card"><img src="https://placeimg.com/200/200/arch" alt="Arch">
+            <figcaption>Arch</figcaption>
+        </figure>
 
-       
+        <figure class="card"><img src="https://placeimg.com/200/200/nature" alt="Nature">
+            <figcaption>Nature</figcaption>
+        </figure>
+
+
     </section>
-    <script src="/29.-DOM/js/creating elements.js"></script>
+
+    <!-- The <template> tag is used as a container to hold some HTML content hidden from the user when the page loads.-->
+    <template id="template-card">
+        <figure class="card">
+            <img>
+            <figcaption></figcaption>
+        </figure>
+    </template>
+    <script src="/29.-DOM/js/template.js"></script>
 </body>
 
 </html>
