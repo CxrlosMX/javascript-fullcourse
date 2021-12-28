@@ -6,6 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+    <style>
+        .event-flow div {
+            padding: 4rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .one {
+            background-color: yellow;
+        }
+
+        .two {
+            background-color: gold;
+        }
+
+        .three {
+            background-color: lightyellow;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,9 +44,23 @@
     <br><br>
     <!-- ----Removing a event -->
     <button id="remove-event">Removing event with multiple handlers</button>
+    <hr>
+    <br><br><br><br><br>
+    <h4>Event Flow</h4>
+    <section class="event-flow">
+        <div class="one">
+            1
+            <div class="two">
+                2
+                <div class="three">
+                    3
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- JS -->
-    <script src="js/events-parameters.js"></script>
+    <script src="js/event-flow.js"></script>
 </body>
 
 </html>
