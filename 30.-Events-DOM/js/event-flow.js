@@ -2,10 +2,13 @@
 
 //Event Bubbling-->Event Bubbling is the event starts from the deepest element or target element to its parents, then all its ancestors which are on the way to bottom to top. At present, all the modern browsers have event bubbling as the default way of event flow
 const $divsEvents = document.querySelectorAll(".event-flow div");
+const $linkEvent=document.querySelector(".event-flow a");
 console.log($divsEvents);
 
 function eventFlow(e) {
     console.log(`Hi im ${this.className}, the click is from ${e.target.className}`);
+    // The stopPropagation() method prevents propagation of the same event from being called. Propagation means bubbling up to parent elements or capturing 
+    e.stopPropagation();
 }
 
 
@@ -19,8 +22,15 @@ $divsEvents.forEach(div => {
     //We can use a object with the values 
     div.addEventListener("click", eventFlow, {
         capture: false, /*Event Bubbling: false Event Capturing:true*/
-        
+
         // to run only once is like removeEventListener
-        once: true
+        //once: true
     });
+});
+
+$linkEvent.addEventListener("click",(e)=>{
+    alert("Hi i`m CxrlosMX");
+    // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur. 
+    e.preventDefault();
+    e.stopPropagation();
 });
