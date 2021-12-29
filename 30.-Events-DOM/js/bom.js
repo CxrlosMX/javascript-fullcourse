@@ -45,3 +45,5 @@ window.addEventListener("DOMContentLoaded", (e) => {
     console.log(window.screenY);
     console.log(e);
 });
+
+// METHODS
