@@ -9,10 +9,23 @@
 
 // The resize event fires when the document view (window) has been resized
 window.addEventListener("resize", (e) => {
+    console.clear();
     console.log("------Event Resize------");
     console.log(window.innerWidth);
     console.log(window.innerHeight);
     console.log(window.outerWidth);
     console.log(window.outerHeight);
+    console.log(e);
+});
+
+// EVENT SCROLL
+window.addEventListener("scroll", (e) => {
+    console.clear();
+    console.log("------Event Scroll------");
+    // ScrollX: Returns the number of pixels that the document has been horizontally scrolled.
+    console.log("ScrollX",window.scrollX);
+    // ScrollY:Returns the number of pixels that have been displaced in the document by vertical scroll.
+    console.log("ScrollY",window.scrollY);
+
     console.log(e);
 });
