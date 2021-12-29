@@ -2,14 +2,28 @@
 
 //Event Bubbling-->Event Bubbling is the event starts from the deepest element or target element to its parents, then all its ancestors which are on the way to bottom to top. At present, all the modern browsers have event bubbling as the default way of event flow
 const $divsEvents = document.querySelectorAll(".event-flow div");
-const $linkEvent=document.querySelector(".event-flow a");
+const $linkEvent = document.querySelector(".event-flow a");
 console.log($divsEvents);
 
 function eventFlow(e) {
     console.log(`Hi im ${this.className}, the click is from ${e.target.className}`);
     // The stopPropagation() method prevents propagation of the same event from being called. Propagation means bubbling up to parent elements or capturing 
-    e.stopPropagation();
+    //e.stopPropagation();
 }
+
+// Event delegation:is basically a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event 
+document.addEventListener("click", (e) => {
+    console.log("Click on ", e.target);
+    // The matches() method returns a Boolean value indicating whether an element is matched by a specific CSS selector or not.
+    if (e.target.matches(".event-flow div")) {
+        eventFlow(e);
+    }
+
+    if (e.target.matches(".event-flow a")) {
+        alert("Hi i`m CxrlosMX");
+        e.preventDefault();
+    }
+});
 
 
 // add events dynamically
@@ -28,7 +42,7 @@ $divsEvents.forEach(div => {
     });
 });
 
-$linkEvent.addEventListener("click",(e)=>{
+$linkEvent.addEventListener("click", (e) => {
     alert("Hi i`m CxrlosMX");
     // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur. 
     e.preventDefault();
