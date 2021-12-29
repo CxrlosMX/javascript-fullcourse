@@ -31,9 +31,16 @@ window.addEventListener("scroll", (e) => {
 
 // LOAD EVENT:The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images.
 window.addEventListener("load", (e) => {
-    console.clear();
     console.log("------LOAD EVENT------");
     // The screenX property returns the horizontal coordinate (according to the users computer screen) of the mouse pointer when an event was triggered.
+    console.log(window.screenX);
+    console.log(window.screenY);
+    console.log(e);
+});
+
+// The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. 
+window.addEventListener("DOMContentLoaded", (e) => {
+    console.log("------DOMContentLoaded event------");
     console.log(window.screenX);
     console.log(window.screenY);
     console.log(e);
