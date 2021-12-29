@@ -18,14 +18,23 @@ window.addEventListener("resize", (e) => {
     console.log(e);
 });
 
-// EVENT SCROLL
+//  SCROLL EVENT
 window.addEventListener("scroll", (e) => {
     console.clear();
     console.log("------Event Scroll------");
     // ScrollX: Returns the number of pixels that the document has been horizontally scrolled.
-    console.log("ScrollX",window.scrollX);
+    console.log("ScrollX", window.scrollX);
     // ScrollY:Returns the number of pixels that have been displaced in the document by vertical scroll.
-    console.log("ScrollY",window.scrollY);
+    console.log("ScrollY", window.scrollY);
+    console.log(e);
+});
 
+// LOAD EVENT:The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images.
+window.addEventListener("load", (e) => {
+    console.clear();
+    console.log("------LOAD EVENT------");
+    // The screenX property returns the horizontal coordinate (according to the users computer screen) of the mouse pointer when an event was triggered.
+    console.log(window.screenX);
+    console.log(window.screenY);
     console.log(e);
 });
