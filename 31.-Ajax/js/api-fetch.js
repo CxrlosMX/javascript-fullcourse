@@ -19,8 +19,8 @@ const d = document;
         $fetch.appendChild($fragment);
     }).catch((error) => {
         console.log(error);
-        let messege = err.statusText || "Error";
-        $fetch.innerHTML = `Error ${fetch.status}: ${messege}`;
+        let messege = error.statusText || "Error";
+        $fetch.innerHTML = `Error ${error.status}: ${messege}`;
     }).finally(() => {
         console.log("This message will always be seen");
     });
