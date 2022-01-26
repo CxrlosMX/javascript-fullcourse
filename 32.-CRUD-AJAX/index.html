@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-API REST-AJAX</title>
+</head>
+
+<body>
+    <h1>CRUD-API REST-AJAX</h1>
+    <section class="crud">
+        <article>
+            <h2 class="crud-title">Add Gods</h2>
+            <form action="" class="crud-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <br>
+                <input type="text" name="power" placeholder="Power" required>
+                <br>
+                <input type="submit" value="Send">
+                <input type="hidden" name="action">
+            </form>
+        </article>
+        <article>
+            <h2>See gods</h2>
+            <table class="crud-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Power</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <template id="crud-template">
+        <tr>
+            <td class="name"></td>
+            <td class="power"></td>
+            <td>
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </td>
+        </tr>
+    </template>
+    <script src="js/ajax.js"></script>
+</body>
+
+</html>
