@@ -76,6 +76,30 @@ d.addEventListener("submit", (e) => {
     }
     else {
         // Update-PUT
+        ajax({
+            url: `http://localhost:3000/santos/${e.target.id.value}`,
+            method: "PUT",
+            success: (res) => location.reload(),
+            error: (err) => $form.insertAdjacentHTML("afterend", `<p><b>${err}</b></p>`),
+            data: {
+                nombre: e.target.name.value,
+                constelacion: e.target.power.value
+            }
+        });
     }
 
+});
+
+d.addEventListener("click", e => {
+    if (e.target.matches(".edit")) {
+        alert("You pressed the button Edit");
+        $title.textContent="Editant";
+        $form.name.value=e.target.dataset.name;
+        $form.power.value=e.target.dataset.constellation;
+        $form.id.value=e.target.dataset.id;
+
+    }
+    if (e.target.matches(".delete")) {
+        alert("You pressed the button delete");
+    }
 });
