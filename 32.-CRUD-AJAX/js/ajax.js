@@ -93,13 +93,21 @@ d.addEventListener("submit", (e) => {
 d.addEventListener("click", e => {
     if (e.target.matches(".edit")) {
         alert("You pressed the button Edit");
-        $title.textContent="Editant";
-        $form.name.value=e.target.dataset.name;
-        $form.power.value=e.target.dataset.constellation;
-        $form.id.value=e.target.dataset.id;
+        $title.textContent = "Editant";
+        $form.name.value = e.target.dataset.name;
+        $form.power.value = e.target.dataset.constellation;
+        $form.id.value = e.target.dataset.id;
 
     }
     if (e.target.matches(".delete")) {
-        alert("You pressed the button delete");
+        let isDelete = confirm("Are you sure you want to delete?");
+        if (isDelete) {
+            ajax({
+                url: `http://localhost:3000/santos/${e.target.dataset.id}`,
+                method: "DELETE",
+                success: (res) => location.reload(),
+                error: (err) => alert(err),
+            });
+        }
     }
 });
