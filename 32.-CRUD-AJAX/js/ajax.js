@@ -57,3 +57,25 @@ const getAll = () => {
 
 
 d.addEventListener("DOMContentLoaded", getAll);
+d.addEventListener("submit", (e) => {
+    if (e.target === $form) {
+        e.preventDefault();
+    }
+    if (!e.target.id.value) {
+        // Create-POST
+        ajax({
+            url: "http://localhost:3000/santos",
+            method: "POST",
+            success: (res) => location.reload(),
+            error: (err) => $form.insertAdjacentHTML("afterend", `<p><b>${err}</b></p>`),
+            data: {
+                nombre: e.target.name.value,
+                constelacion: e.target.power.value
+            }
+        });
+    }
+    else {
+        // Update-PUT
+    }
+
+});

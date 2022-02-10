@@ -24,6 +24,11 @@
       "id": 5,
       "nombre": "Ikki",
       "constelacion": "Fenix"
+    },
+    {
+      "nombre": "Mu",
+      "constelacion": "Aries",
+      "id": 6
     }
   ],
   "dioses": [
