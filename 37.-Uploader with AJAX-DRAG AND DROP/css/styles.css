@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+progress {
+  margin-top: 1rem;
+}
+.drop-zone {
+  margin: 0 auto;
+  border: 2px dotted #000;
+  width: 80%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 1s ease;
+}
+.drop-zone.is-active {
+  border: thick dashed #000;
+  background-color: rgba(0, 128, 0, 0.5);
+  animation: pulse 1.5s infinite;
+  animation-timing-function: linear;
+}
+/* Animation */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  } 
+}
+
+.drop-zone:hover {
+  box-shadow: 2px 4px 10px 4px red;
+}

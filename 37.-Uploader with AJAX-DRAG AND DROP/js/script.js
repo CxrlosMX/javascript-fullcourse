@@ -1,6 +1,7 @@
 const d = document,
     $main = d.querySelector("main"),
-    $files = d.getElementById("files");
+    $dropZone = d.querySelector(".drop-zone");
+
 
 
 const uploader = (file) => {
@@ -52,23 +53,32 @@ const progressUpload = (file) => {
         $span.innerHTML = `<b>${file.name}- ${progress}%</b>`;
     });
     fileReader.addEventListener("loadend", e => {
-        // uploader(file);
+        // uploader(file);s
         setTimeout(() => {
             $main.removeChild($progress);
             $main.removeChild($span);
-            $files.value = "";
         }, 3000)
     });
 }
 
-d.addEventListener("change", e => {
-    if (e.target === $files) {
-        console.log(e.target.files);
+$dropZone.addEventListener("dragover", e => {
+    // console.log(e);
+    e.preventDefault();
+    e.stopPropagation();
+    e.target.classList.add("is-active");
+});
+$dropZone.addEventListener("dragleave", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.target.classList.remove("is-active");
+});
+$dropZone.addEventListener("drop", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    const files = Array.from(e.dataTransfer.files);
 
-        const files = Array.from(e.target.files);
-
-        files.forEach(el => {
-            progressUpload(el);
-        });
-    }
+    files.forEach(el => {
+        progressUpload(el);
+    });
+    e.target.classList.remove("is-active");
 });
