@@ -32,6 +32,35 @@ const uploader = (file) => {
     xhr.send(formData);
 }
 
+const progressUpload = (file) => {
+    const $progress = d.createElement("progress"),
+        $span = d.createElement("span");
+
+    $progress.value = 0;
+    $progress.max = 100;
+
+    $main.insertAdjacentElement("beforeend", $progress);
+    $main.insertAdjacentElement("beforeend", $span);
+
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+
+    fileReader.addEventListener("progress", e => {
+        // console.log(e);
+        let progress = parseInt((e.loaded * 100) / e.total);
+        $progress.value = progress;
+        $span.innerHTML = `<b>${file.name}- ${progress}%</b>`;
+    });
+    fileReader.addEventListener("loadend", e => {
+        uploader(file);
+        setTimeout(() => {
+            $main.removeChild($progress);
+            $main.removeChild($span);
+            $files.value = "";
+        }, 3000)
+    });
+}
+
 d.addEventListener("change", e => {
     if (e.target === $files) {
         console.log(e.target.files);
@@ -39,7 +68,7 @@ d.addEventListener("change", e => {
         const files = Array.from(e.target.files);
 
         files.forEach(el => {
-            uploader(el);
+            progressUpload(el);
         });
     }
 });
