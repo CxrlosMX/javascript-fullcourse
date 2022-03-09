@@ -15,3 +15,6 @@ main {
     align-items: center;
     min-height: 100vh;
 }
+progress{
+  margin-top: 1rem;
+}

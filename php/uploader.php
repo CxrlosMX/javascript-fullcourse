@@ -1,8 +1,4 @@
 <?php
-// echo "hello, response from the server";
-
-// var_dump($_FILES);
-
 if (isset($_FILES["file"])) {
     $name=$_FILES["file"]["name"];
     $file=$_FILES["file"]["tmp_name"];
@@ -11,7 +7,7 @@ if (isset($_FILES["file"])) {
     $upload=move_uploaded_file($file,$destination);
 
     if ($upload) {
-        # code...
+    
         $res=array(
             "err" =>false,
             "status"=> http_response_code(200),
