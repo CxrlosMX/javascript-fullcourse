@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+header {
+  max-width: 100%;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(253, 208, 5);
+}
+
+.container {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+  /* background-color: #333; */
+}
+/* Formulario */
+.contact-form{
+  --form-ok-color:#4caf50;
+  --form-error-color:#f44336;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.contact-form> *{
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+  padding: 0.5rem;
+}
+.contact-form textarea{
+  resize: none;
+}
+.contact-form legend,
+.contact-form-response{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.contact-form input,
+.contact-form textarea{
+  font-size: 1rem;
+  /* font-family: sans-serif; */
+}
+.contact-form input[type="submit"]{
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact-form *::placeholder{
+  color: #000;
+}
+/* validacion con css */
+.contact-form [required]:valid{
+  border: thin solid var(--form-ok-color);
+}
+.contact-form [required]:invalid{
+  border: thin solid var(--form-error-color);
+}
+.contact-form-error{
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+.contact-form-error.is-active{
+  display: block;
+  animation: show-messege 1s 1 normal 0s ease-out both;
+}
+.none{
+  display: none;
+}
+@keyframes show-message {
+  0%{
+    visibility: hidden;
+    opacity: 0;
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}

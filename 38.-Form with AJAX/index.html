@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" data-dark>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Validación de formularios con HTML y CSS</title>
+</head>
+
+<body data-dark>
+    <header>
+        <h1>Validación de formularios con HTML y CSS</h1>
+    </header>
+    <section class="container">
+        <form class="contact-form">
+            <legend>Envíanos tus comentarios</legend>
+            <input type="text" name="name" placeholder="Escribe tu nombre"
+                title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+
+            <input type="email" name="email" required title="Email incorrecto" placeholder="Escribe tu email"
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+
+            <input type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" required>
+            <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" title="Tu comentario no debe exceder los 255 caracteres"
+                required></textarea>
+            <input type="submit" value="Enviar">
+            <div class="contact-form-loader none">
+                <img src="/assets/img/tail-spin.svg" alt="Cargando">
+            </div>
+            <div class="contact-form-response none">
+               <p>Los datos han sido enviados</p> 
+            </div>
+        </form>
+    </section>
+
+
+
+
+    <script src="./js/index-dom.js" type="module"></script>
+</body>
+
+</html>
