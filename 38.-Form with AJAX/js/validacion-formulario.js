@@ -45,8 +45,8 @@ export default function contactFormValidations() {
 
     // Simulación de envio de correo 
     d.addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Enviando Formulario");
+        // e.preventDefault();
+        alert("Sending Formulario");
 
         // Almacenamos el loader y la referencia de envio
         const $loader = d.querySelector(".contact-form-loader"),
@@ -54,18 +54,42 @@ export default function contactFormValidations() {
 
         $loader.classList.remove("none");
 
-        // Simulamos el envio de nuestro formulario, con un settimeout
-        setTimeout((e) => {
-            $loader.classList.add("none");
-            $response.classList.remove("none");
-            // Y reseteamos el formulario
-            $form.reset();
-            // Agregamos otro settimeout para que se quite el mensaje despues de cierto tiempo
-            setTimeout(() => {
-                $response.classList.add("none");
-            }, 2000);
-        }, 2000);
+        // // Simulamos el envio de nuestro formulario, con un settimeout
+        // setTimeout((e) => {
+        //     $loader.classList.add("none");
+        //     $response.classList.remove("none");
+        //     // Y reseteamos el formulario
+        //     $form.reset();
+        //     // Agregamos otro settimeout para que se quite el mensaje despues de cierto tiempo
+        //     setTimeout(() => {
+        //         $response.classList.add("none");
+        //     }, 2000);
+        // }, 2000);
 
+
+        fetch("https://formsubmit.co/ajax/luiscrendon131@email.com", {
+            method: "POST",
+            body: new FormData(e.target)
+        })
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(json => {
+                console.log(json);
+                $loader.classList.add("none");
+                $response.classList.remove("none");
+                $response.innerHTML = `<p>${json.message}</p>`
+                $form.reset();
+            })
+            .catch(err => {
+                console.log(err);
+                let messege = err.statusText || "There's been a problem";
+                $response.innerHTML = `<p>Error: ${err.status}: ${messege}</p>`
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    $response.classList.add("none");
+                    $response.innerHTML = "";
+                }, 2000);
+            })
 
     });
 }
