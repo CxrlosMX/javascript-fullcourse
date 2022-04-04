@@ -45,7 +45,7 @@ export default function contactFormValidations() {
 
     // Simulación de envio de correo 
     d.addEventListener("submit", (e) => {
-        // e.preventDefault();
+        //  e.preventDefault();
         alert("Sending Formulario");
 
         // Almacenamos el loader y la referencia de envio
@@ -67,7 +67,7 @@ export default function contactFormValidations() {
         // }, 2000);
 
 
-        fetch("https://formsubmit.co/ajax/luiscrendon131@email.com", {
+        fetch("https://formsubmit.co/ajax/luiscrendon131@gmail.com", {
             method: "POST",
             body: new FormData(e.target)
         })
